@@ -167,9 +167,6 @@ async def giverole(ctx, user: discord.Member = None, *, name = None):
     await client.delete_message(ctx.message)
     await asyncio.sleep(5)
     await client.delete_message(text)
-@client.command(pass_context=True)
-@command.has_permission(ban_members=True, kick_member=True)
-
 	
 client.loop.create_task(change_status())
 client.run(os.environ['BOT_TOKEN'])
