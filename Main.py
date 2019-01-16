@@ -30,7 +30,7 @@ async def on_ready():
 async def on_message(message):
 	channel = message.channel
 	if message.content.startwith('.ping'):
-		await client.send_message(channel, 'Pong! Ling Long!')
+		await client.send_message(channel, 'Pong!')
 		
 		
 @client.command(pass_context=True)
