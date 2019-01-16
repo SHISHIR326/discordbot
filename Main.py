@@ -32,6 +32,12 @@ async def on_message(message):
 	if message.content.startwith('.ping'):
 		await client.send_message(channel, 'Pong!')
 		
+@client.event
+async def on_message(message):
+	channel = message.channel
+	if message.content.startwith('.helpers'):
+		await client.send_message(channel, "@noobperson#2436 and @sushiporkroll#0001!')
+		
 		
 @client.command(pass_context=True)
 async def ping(ctx):
