@@ -5,8 +5,8 @@ import time
 from itertools import cycle
 import os
 
-client = commands.Bot(command_prefix=("/"))
-status = ["Out of Service", "/help"]
+client = commands.Bot(command_prefix=("."))
+status = ["Made by Sushiporkroll", ".help"]
 
 async def change_status():
   await client.wait_until_ready()
@@ -26,6 +26,13 @@ async def on_ready():
 	print("User id:", client.user.id)
 	print('---------------')
     
+@client.event
+async def on_message(message):
+	channel = message.channel
+	if message.content.startwith('.ping'):
+		await client.send_message(channel, 'Pong! Ling Long!')
+		
+		
 @client.command(pass_context=True)
 async def ping(ctx):
     """Pings the bot and gets a response time."""
