@@ -30,7 +30,7 @@ async def on_message(message):
 		await client.send_message(message.channel, 'Pong!')
 	
 	if message.content.startswith('.helpers'):
-		await client.send_message(message.channel, '@noobperson#2436!')
+		await client.send_message(message.channel, '<@277983178914922497>!')
 		
 @client.command(pass_context=True)
 async def ping(ctx):
