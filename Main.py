@@ -35,7 +35,7 @@ async def on_message(message):
 	if message.content.startswith('.owner'):
 		await client.send_message(message.channel, '<@303657894161809412>!')
 		
-@client.event
+@client.command
 async def on_message(message):
 	if message.content.startswith('.say'):
 		msg = message.content.split()
