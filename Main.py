@@ -5,7 +5,7 @@ import time
 from itertools import cycle
 import os
 
-client = commands.Bot(command_prefix=("/"))
+client = commands.Bot(command_prefix=("."))
 status = ["Made by Sushiporkroll", ".help"]
 
 async def change_status():
