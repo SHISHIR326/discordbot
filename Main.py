@@ -32,9 +32,6 @@ async def on_message(message):
 	if message.content.startswith('.helpers'):
 		await client.send_message(message.channel, '<@277983178914922497>!')
 		
-	if message.content.startswith('.owner'):
-		await client.send_message(message.channel, '<@303657894161809412>!')
-		
 @client.command(pass_context=True)
 async def ping(ctx):
     """Pings the bot and gets a response time."""
@@ -176,6 +173,10 @@ async def giverole(ctx, user: discord.Member = None, *, name = None):
     await client.delete_message(ctx.message)
     await asyncio.sleep(5)
     await client.delete_message(text)
+
+@client.command(pass_context=True)
+async def avatar(ctx):
+	await client.say("{}".format(ctx.message.author.avatar_url))
 	
 client.loop.create_task(change_status())
 client.run(os.environ['BOT_TOKEN'])
