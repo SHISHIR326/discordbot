@@ -32,6 +32,9 @@ async def on_message(message):
 	if message.content.startswith('.helpers'):
 		await client.send_message(message.channel, '<@277983178914922497>!')
 		
+	if message.content.startswith('owner'):
+		await client.send_message(message.channel, '<@303657894161809412>!')
+		
 @client.command(pass_context=True)
 async def ping(ctx):
     """Pings the bot and gets a response time."""
