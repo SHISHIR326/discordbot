@@ -35,6 +35,17 @@ async def on_message(message):
 	if message.content.startswith('.owner'):
 		await client.send_message(message.channel, '<@303657894161809412>!')
 		
+@client.event
+async def on_message(message):
+	if message.content.startswith('.say'):
+		msg = message.content.split()
+		output = ''
+		for word in msg[1:]:
+			output += word
+			output += ' '
+		await client.send_message(channel, output)
+		
+		
 @client.command(pass_context=True)
 async def ping(ctx):
     """Pings the bot and gets a response time."""
