@@ -15,9 +15,7 @@ async def change_status():
   while not client.is_closed:
     current_status = next(msgs)
     await client.change_presence(game=discord.Game(name=current_status))
-    await asyncio.sleep(5)
-    
-player = {}	
+    await asyncio.sleep(5)	
 
 @client.event
 async def on_ready():
@@ -30,9 +28,7 @@ async def on_ready():
 async def on_message(message):
 	if message.content.startswith('.ping'):
 		await client.send_message(message.channel, 'Pong!')
-		
-@client.event
-async def on_message(message):
+	
 	if message.content.startswith('.helpers'):
 		await client.send_message(message.channel, '@noobperson#2436!')
 		
