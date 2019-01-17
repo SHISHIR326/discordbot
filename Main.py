@@ -28,15 +28,13 @@ async def on_ready():
     
 @client.event
 async def on_message(message):
-	channel = message.channel
 	if message.content.startswith('.ping'):
-		await client.send_message(channel, 'Pong!')
+		await client.send_message(message.channel, 'Pong!')
 		
 @client.event
 async def on_message(message):
-	channel = message.channel
 	if message.content.startswith('.helpers'):
-		await client.send_message(channel, '@noobperson#2436!')
+		await client.send_message(message.channel, '@noobperson#2436!')
 		
 		
 @client.command(pass_context=True)
