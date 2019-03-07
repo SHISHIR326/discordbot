@@ -34,6 +34,9 @@ async def on_message(message):
 		
 	if message.content.startswith('.owner'):
 		await client.send_message(message.channel, '<@303657894161809412>!')
+	
+	if message.conetent.startswith('gay'):
+		await client.send_message(message.channel, 'theonlygaypersonifindhereisataur!')
 		
 @client.command
 async def on_message(message):
